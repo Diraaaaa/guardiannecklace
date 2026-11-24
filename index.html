@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardian Necklace - Aplikasi Perlindungan Anak</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="mobile-container">
+        <!-- Login Page -->
+        <div id="loginPage" class="page active">
+            <div class="login-container">
+                <div class="logo-section">
+                    <div class="logo-icon">🛡️</div>
+                    <h1 class="app-title">Guardian Necklace</h1>
+                    <p class="tagline">Jaga Anak-ta', Jaga Masa Depan-ta'</p>
+                </div>
+                <div class="login-form">
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" placeholder="nama@email.com" value="orangtua@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" placeholder="••••••••" value="password">
+                    </div>
+                    <button class="btn btn--primary btn--full-width" onclick="navigateTo('homePage')">Masuk</button>
+                    <div class="login-footer">
+                        <a href="#" class="text-link">Lupa password?</a>
+                        <span class="divider">•</span>
+                        <a href="#" class="text-link">Daftar akun baru</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Home Dashboard Page -->
+        <div id="homePage" class="page">
+            <div class="header">
+                <h2 class="page-title">Dashboard</h2>
+                <button class="icon-btn" onclick="navigateTo('settingsPage')">
+                    <span class="icon">⚙️</span>
+                </button>
+            </div>
+            <div class="content">
+                <div class="child-profile-card">
+                    <div class="child-avatar">👧</div>
+                    <div class="child-info">
+                        <h3 class="child-name">Aisyah</h3>
+                        <p class="child-age">6 tahun</p>
+                    </div>
+                    <div class="status-badge status-safe">
+                        <span class="status-dot"></span>
+                        <span>Aman</span>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">🔋</div>
+                        <div class="stat-info">
+                            <div class="stat-label">Baterai</div>
+                            <div class="stat-value">85%</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📡</div>
+                        <div class="stat-info">
+                            <div class="stat-label">Koneksi</div>
+                            <div class="stat-value">Terhubung</div>
+                        </div>
+                    </div>
+                    <div class="stat-card full-width">
+                        <div class="stat-icon">🕐</div>
+                        <div class="stat-info">
+                            <div class="stat-label">Terakhir diperbarui</div>
+                            <div class="stat-value">2 menit yang lalu</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quick-actions">
+                    <h4 class="section-title">Aksi Cepat</h4>
+                    <div class="action-buttons">
+                        <button class="action-btn" onclick="navigateTo('trackingPage')">
+                            <span class="action-icon">📍</span>
+                            <span class="action-label">Lihat Lokasi Real-time</span>
+                        </button>
+                        <button class="action-btn" onclick="navigateTo('historyPage')">
+                            <span class="action-icon">📋</span>
+                            <span class="action-label">Riwayat Perjalanan</span>
+                        </button>
+                        <button class="action-btn" onclick="navigateTo('geofencingPage')">
+                            <span class="action-icon">🗺️</span>
+                            <span class="action-label">Pengaturan Zona Aman</span>
+                        </button>
+                        <button class="action-btn" onclick="navigateTo('notificationsPage')">
+                            <span class="action-icon">🔔</span>
+                            <span class="action-label">Notifikasi</span>
+                            <span class="badge">2</span>
+                        </button>
+                    </div>
+                </div>
+
+                <button class="btn btn--outline btn--full-width" onclick="navigateTo('deviceStatusPage')">
+                    Status Perangkat Lengkap
+                </button>
+            </div>
+            <div class="bottom-nav">
+                <button class="nav-item active" onclick="navigateTo('homePage')">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-label">Beranda</span>
+                </button>
+                <button class="nav-item" onclick="navigateTo('trackingPage')">
+                    <span class="nav-icon">📍</span>
+                    <span class="nav-label">Pelacakan</span>
+                </button>
+                <button class="nav-item" onclick="navigateTo('historyPage')">
+                    <span class="nav-icon">📋</span>
+                    <span class="nav-label">Riwayat</span>
+                </button>
+                <button class="nav-item" onclick="navigateTo('notificationsPage')">
+                    <span class="nav-icon">🔔</span>
+                    <span class="nav-label">Notifikasi</span>
+                </button>
+                <button class="nav-item" onclick="navigateTo('settingsPage')">
+                    <span class="nav-icon">⚙️</span>
+                    <span class="nav-label">Pengaturan</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Real-time Tracking Page -->
+        <div id="trackingPage" class="page">
+            <div class="header">
+                <button class="icon-btn" onclick="navigateTo('homePage')">
+                    <span class="icon">←</span>
+                </button>
+                <h2 class="page-title">Pelacakan Real-time</h2>
+            </div>
+            <div class="content no-padding">
+                <div class="tracking-header">
+                    <div class="child-avatar-small">👧</div>
+                    <div class="tracking-info">
+                        <h3 class="child-name">Aisyah</h3>
+                        <div class="status-badge status-safe">
+                            <span class="status-dot"></span>
+                            <span>Aman</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <div class="map-marker">📍</div>
+                        <div class="safe-zone-circle"></div>
+                        <div class="map-overlay">
+                            <div class="location-info">
+                                <p class="location-name">Taman Pakui Sayang, Makassar</p>
+                                <p class="coordinates">-5.1477, 119.4327</p>
+                                <p class="accuracy">Akurasi: 4.5m</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tracking-controls">
+                    <button class="control-btn">
+                        <span class="icon">🔄</span>
+                        <span>Refresh</span>
+                    </button>
+                    <button class="control-btn">
+                        <span class="icon">🧭</span>
+                        <span>Arahkan</span>
+                    </button>
+                    <button class="control-btn control-emergency" onclick="showEmergencyModal()">
+                        <span class="icon">🚨</span>
+                        <span>Darurat 112</span>
+                    </button>
+                    <button class="control-btn">
+                        <span class="icon">📤</span>
+                        <span>Bagikan</span>
+                    </button>
+                </div>
+            </div>
+            <div class="bottom-nav">
+                <button class="nav-item" onclick="navigateTo('homePage')">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-label">Beranda</span>
+                </button>
+                <button class="nav-item active" onclick="navigateTo('trackingPage')">
+                    <span class="nav-icon">📍</span>
+                    <span class="nav-label">Pelacakan</span>
+                </button>
+                <button class="nav-item" onclick="navigateTo('historyPage')">
+                    <span class="nav-icon">📋</span>
+                    <span class="nav-label">Riwayat</span>
+                </button>
+                <button class="nav-item" onclick="navigateTo('notificationsPage')">
+                    <span class="nav-icon">🔔</span>
+                    <span class="nav-label">Notifikasi</span>
+                </button>
+                <button class="nav-item" onclick="navigateTo('settingsPage')">
+                    <span class="nav-icon">⚙️</span>
+                    <span class="nav-label">Pengaturan</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Geofencing Page -->
+        <div id="geofencingPage" class="page">
+            <div class="header">
+                <button class="icon-btn" onclick="navigateTo('homePage')">
+                    <span class="icon">←</span>
+                </button>
+                <h2 class="page-title">Zona Aman</h2>
+            </div>
+            <div class="content">
+                <div class="map-preview">
+                    <div class="map-placeholder-small">
+                        <div class="map-marker">📍</div>
+                        <div class="safe-zone-circle"></div>
+                    </div>
+                </div>
+                <div class="zone-list">
+                    <h4 class="section-title">Zona Tersimpan</h4>
+                    <div class="zone-card">
+                        <div class="zone-icon">🏠</div>
+                        <div class="zone-info">
+                            <h5 class="zone-name">Rumah</h5>
+                            <p class="zone-address">Jl. Sungai Saddang No. 15, Makassar</p>
+                            <p class="zone-radius">Radius: 100m</p>
+                        </div>
+                        <div class="zone-actions">
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-icon">🏫</div>
+                        <div class="zone-info">
+                            <h5 class="zone-name">Sekolah</h5>
+                            <p class="zone-address">SD Negeri 1 Makassar, Jl. Gunung Bawakaraeng</p>
+                            <p class="zone-radius">Radius: 150m</p>
+                        </div>
+                        <div class="zone-actions">
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-icon">🌳</div>
+                        <div class="zone-info">
+                            <h5 class="zone-name">Taman Pakui Sayang</h5>
+                            <p class="zone-address">Taman Pakui Sayang, Makassar</p>
+                            <p class="zone-radius">Radius: 80m</p>
+                        </div>
+                        <div class="zone-actions">
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn--primary btn--full-width">
+                    <span class="icon">➕</span> Tambah Zona Baru
+                </button>
+            </div>
+            <div class="bottom-nav">
+                <button class="nav-item" onclick="navigateTo('homePage')">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-label">Beranda</span>
+                </button>
+                <button class="nav-item" onclick="navigateTo('trackingPage')">
+                    <span class="nav-icon">📍</span>
+                    <span class="nav-label">Pelacakan</span>
+                </button>
+                <button class="nav-item" onclick="navigateTo('historyPage')">
+                    <span class="nav-icon">📋</span>
+                    <span class="nav-label">Riwayat</span>
+                </button>
+                <button class="nav-item" onclick="navigateTo('notificationsPage')">
+                    <span class="nav-icon">🔔</span>
+                    <span class="nav-label">Notifikasi</span>
+                </button>
+                <button class="nav-item" onclick="navigateTo('settingsPage')">
+                    <span class="nav-icon">⚙️</span>
+                    <span class="nav-label">Pengaturan</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Travel History Page -->
+        <div id="historyPage" class="page">
+            <div class="header">
+                <button class="icon-btn" onclick="navigateTo('homePage')">
+                    <span class="icon">←</span>
+                </button>
+                <h2 class="page-title">Riwayat Perjalanan</h2>
+            </div>
+            <div class="content">
+                <div class="date-selector">
+                    <button class="date-btn active">Hari Ini</button>
+                    <button class="date-btn">Kemarin</button>
+                    <button class="date-btn">7 Hari</button>
+                    <button class="date-btn">📅 Pilih Tanggal</button>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-time">07:30</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h5 class="timeline-location">Rumah</h5>
+                            <p class="timeline-duration">Durasi: 45 menit</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">08:15</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h5 class="timeline-location">Perjalanan ke Sekolah</h5>
+                            <p class="timeline-duration">Durasi: 15 menit</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">08:30</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h5 class="timeline-location">Sekolah</h5>
+                            <p class="timeline-duration">Durasi: 4 jam</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">12:30</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h5 class="timeline-location">Istirahat/Taman</h5>
+                            <p class="timeline-duration">Durasi: 30 menit</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">13:00</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h5 class="timeline-location">Sekolah</h5>
+                            <p class="timeline-duration">Durasi: 2 jam</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item active">
+                        <div class="timeline-time">15:00</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h5 class="timeline-location">Taman Pakui Sayang</h5>
+                            <p class="timeline-duration">Durasi: 1 jam (Saat ini)</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn--outline btn--full-width">
+                    <span class="icon">📥</span> Ekspor Riwayat
+                </button>
+            </div>
+            <div class="bottom-nav">
+                <button class="nav-item" onclick="navigateTo('homePage')">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-label">Beranda</span>
+                </button>
+                <button class="nav-item" onclick="navigateTo('trackingPage')">
+                    <span class="nav-icon">📍</span>
+                    <span class="nav-label">Pelacakan</span>
+                </button>
+                <button class="nav-item active" onclick="navigateTo('historyPage')">
+                    <span class="nav-icon">📋</span>
+                    <span class="nav-label">Riwayat</span>
+                </button>
+                <button class="nav-item" onclick="navigateTo('notificationsPage')">
+                    <span class="nav-icon">🔔</span>
+                    <span class="nav-label">Notifikasi</span>
+                </button>
+                <button class="nav-item" onclick="navigateTo('settingsPage')">
+                    <span class="nav-icon">⚙️</span>
+                    <span class="nav-label">Pengaturan</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Notifications Page -->
+        <div id="notificationsPage" class="page">
+            <div class="header">
+                <button class="icon-btn" onclick="navigateTo('homePage')">
+                    <span class="icon">←</span>
+                </button>
+                <h2 class="page-title">Notifikasi</h2>
+                <button class="icon-btn" onclick="alert('Semua notifikasi ditandai sebagai sudah dibaca')">
+                    <span class="icon">✓</span>
+                </button>
+            </div>
+            <div class="content">
+                <div class="notification-list">
+                    <div class="notification-item notification-warning">
+                        <div class="notification-icon">⚠️</div>
+                        <div class="notification-content">
+                            <h5 class="notification-title">Keluar dari Zona Aman</h5>
+                            <p class="notification-message">Aisyah keluar dari zona 'Sekolah'</p>
+                            <p class="notification-time">10 menit yang lalu</p>
+                        </div>
+                    </div>
+                    <div class="notification-item notification-info">
+                        <div class="notification-icon">🔋</div>
+                        <div class="notification-content">
+                            <h5 class="notification-title">Baterai Lemah</h5>
+                            <p class="notification-message">Baterai perangkat tersisa 15%</p>
+                            <p class="notification-time">1 jam yang lalu</p>
+                        </div>
+                    </div>
+                    <div class="notification-item notification-success">
+                        <div class="notification-icon">✓</div>
+                        <div class="notification-content">
+                            <h5 class="notification-title">Sistem Normal</h5>
+                            <p class="notification-message">Semua sensor berfungsi dengan baik</p>
+                            <p class="notification-time">3 jam yang lalu</p>
+                        </div>
+                    </div>
+                    <div class="notification-item notification-success">
+                        <div class="notification-icon">🏫</div>
+                        <div class="notification-content">
+                            <h5 class="notification-title">Tiba di Zona Aman</h5>
+                            <p class="notification-message">Aisyah tiba di zona 'Sekolah'</p>
+                            <p class="notification-time">6 jam yang lalu</p>
+                        </div>
+                    </div>
+                    <div class="notification-item notification-success">
+                        <div class="notification-icon">🏠</div>
+                        <div class="notification-content">
+                            <h5 class="notification-title">Keluar dari Zona Aman</h5>
+                            <p class="notification-message">Aisyah keluar dari zona 'Rumah'</p>
+                            <p class="notification-time">7 jam yang lalu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-nav">
+                <button class="nav-item" onclick="navigateTo('homePage')">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-label">Beranda</span>
+                </button>
+                <button class="nav-item" onclick="navigateTo('trackingPage')">
+                    <span class="nav-icon">📍</span>
+                    <span class="nav-label">Pelacakan</span>
+                </button>
+                <button class="nav-item" onclick="navigateTo('historyPage')">
+                    <span class="nav-icon">📋</span>
+                    <span class="nav-label">Riwayat</span>
+                </button>
+                <button class="nav-item active" onclick="navigateTo('notificationsPage')">
+                    <span class="nav-icon">🔔</span>
+                    <span class="nav-label">Notifikasi</span>
+                </button>
+                <button class="nav-item" onclick="navigateTo('settingsPage')">
+                    <span class="nav-icon">⚙️</span>
+                    <span class="nav-label">Pengaturan</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Device Status Page -->
+        <div id="deviceStatusPage" class="page">
+            <div class="header">
+                <button class="icon-btn" onclick="navigateTo('homePage')">
+                    <span class="icon">←</span>
+                </button>
+                <h2 class="page-title">Status Perangkat</h2>
+            </div>
+            <div class="content">
+                <div class="device-info-card">
+                    <h4 class="section-title">Informasi Perangkat</h4>
+                    <div class="info-row">
+                        <span class="info-label">Device ID</span>
+                        <span class="info-value">GN-2024-MKS-001234</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Firmware</span>
+                        <span class="info-value">v2.1.0</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Terakhir Sinkronisasi</span>
+                        <span class="info-value">2 menit yang lalu</span>
+                    </div>
+                </div>
+
+                <div class="battery-card">
+                    <h4 class="section-title">Status Baterai</h4>
+                    <div class="battery-display">
+                        <div class="battery-level">85%</div>
+                        <div class="battery-bar">
+                            <div class="battery-fill" style="width: 85%"></div>
+                        </div>
+                        <p class="battery-status">Estimasi tersisa: 14 jam</p>
+                    </div>
+                </div>
+
+                <div class="sensors-card">
+                    <h4 class="section-title">Status Sensor</h4>
+                    <div class="sensor-item">
+                        <span class="sensor-icon">📡</span>
+                        <span class="sensor-name">GPS</span>
+                        <span class="sensor-status status-active">Aktif</span>
+                    </div>
+                    <div class="sensor-item">
+                        <span class="sensor-icon">🎤</span>
+                        <span class="sensor-name">Voice Recognition</span>
+                        <span class="sensor-status status-active">Aktif</span>
+                    </div>
+                    <div class="sensor-item">
+                        <span class="sensor-icon">📏</span>
+                        <span class="sensor-name">Accelerometer</span>
+                        <span class="sensor-status status-active">Aktif</span>
+                    </div>
+                    <div class="sensor-item">
+                        <span class="sensor-icon">🔄</span>
+                        <span class="sensor-name">Gyroscope</span>
+                        <span class="sensor-status status-active">Aktif</span>
+                    </div>
+                    <div class="sensor-item">
+                        <span class="sensor-icon">🚨</span>
+                        <span class="sensor-name">Panic Button</span>
+                        <span class="sensor-status status-ready">Siap</span>
+                    </div>
+                </div>
+
+                <div class="network-card">
+                    <h4 class="section-title">Konektivitas Jaringan</h4>
+                    <div class="info-row">
+                        <span class="info-label">Kekuatan Sinyal</span>
+                        <span class="info-value">Sangat Baik (4/4)</span>
+                    </div>
+                    <div class="signal-bars">
+                        <div class="signal-bar active"></div>
+                        <div class="signal-bar active"></div>
+                        <div class="signal-bar active"></div>
+                        <div class="signal-bar active"></div>
+                    </div>
+                </div>
+
+                <button class="btn btn--primary btn--full-width">
+                    <span class="icon">🔧</span> Test Semua Fitur
+                </button>
+            </div>
+            <div class="bottom-nav">
+                <button class="nav-item" onclick="navigateTo('homePage')">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-label">Beranda</span>
+                </button>
+                <button class="nav-item" onclick="navigateTo('trackingPage')">
+                    <span class="nav-icon">📍</span>
+                    <span class="nav-label">Pelacakan</span>
+                </button>
+                <button class="nav-item" onclick="navigateTo('historyPage')">
+                    <span class="nav-icon">📋</span>
+                    <span class="nav-label">Riwayat</span>
+                </button>
+                <button class="nav-item" onclick="navigateTo('notificationsPage')">
+                    <span class="nav-icon">🔔</span>
+                    <span class="nav-label">Notifikasi</span>
+                </button>
+                <button class="nav-item active" onclick="navigateTo('settingsPage')">
+                    <span class="nav-icon">⚙️</span>
+                    <span class="nav-label">Pengaturan</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Settings Page -->
+        <div id="settingsPage" class="page">
+            <div class="header">
+                <button class="icon-btn" onclick="navigateTo('homePage')">
+                    <span class="icon">←</span>
+                </button>
+                <h2 class="page-title">Pengaturan</h2>
+            </div>
+            <div class="content">
+                <div class="settings-section">
+                    <h4 class="section-title">Akun</h4>
+                    <div class="settings-item" onclick="alert('Fitur kelola profil anak')">
+                        <span class="settings-icon">👤</span>
+                        <span class="settings-label">Profil Anak</span>
+                        <span class="settings-arrow">›</span>
+                    </div>
+                    <div class="settings-item" onclick="alert('Fitur kontak darurat')">
+                        <span class="settings-icon">📞</span>
+                        <span class="settings-label">Kontak Darurat</span>
+                        <span class="settings-arrow">›</span>
+                    </div>
+                </div>
+
+                <div class="settings-section">
+                    <h4 class="section-title">Perangkat</h4>
+                    <div class="settings-item" onclick="navigateTo('deviceStatusPage')">
+                        <span class="settings-icon">📱</span>
+                        <span class="settings-label">Status Perangkat</span>
+                        <span class="settings-arrow">›</span>
+                    </div>
+                    <div class="settings-item" onclick="alert('Fitur pasangkan perangkat baru')">
+                        <span class="settings-icon">🔗</span>
+                        <span class="settings-label">Pasangkan Perangkat Baru</span>
+                        <span class="settings-arrow">›</span>
+                    </div>
+                </div>
+
+                <div class="settings-section">
+                    <h4 class="section-title">Notifikasi</h4>
+                    <div class="settings-item">
+                        <span class="settings-icon">🔔</span>
+                        <span class="settings-label">Suara Notifikasi</span>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    <div class="settings-item">
+                        <span class="settings-icon">📳</span>
+                        <span class="settings-label">Getar</span>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="settings-section">
+                    <h4 class="section-title">Privasi &amp; Keamanan</h4>
+                    <div class="settings-item" onclick="alert('Fitur pengaturan privasi data')">
+                        <span class="settings-icon">🔒</span>
+                        <span class="settings-label">Pengaturan Privasi</span>
+                        <span class="settings-arrow">›</span>
+                    </div>
+                    <div class="settings-item" onclick="alert('Fitur retensi data')">
+                        <span class="settings-icon">💾</span>
+                        <span class="settings-label">Retensi Data</span>
+                        <span class="settings-arrow">›</span>
+                    </div>
+                </div>
+
+                <div class="settings-section">
+                    <h4 class="section-title">Bantuan &amp; Dukungan</h4>
+                    <div class="settings-item" onclick="alert('Halaman FAQ')">
+                        <span class="settings-icon">❓</span>
+                        <span class="settings-label">FAQ</span>
+                        <span class="settings-arrow">›</span>
+                    </div>
+                    <div class="settings-item" onclick="alert('Hubungi support')">
+                        <span class="settings-icon">💬</span>
+                        <span class="settings-label">Hubungi Kami</span>
+                        <span class="settings-arrow">›</span>
+                    </div>
+                    <div class="settings-item" onclick="alert('Tutorial video')">
+                        <span class="settings-icon">🎥</span>
+                        <span class="settings-label">Tutorial Video</span>
+                        <span class="settings-arrow">›</span>
+                    </div>
+                </div>
+
+                <div class="settings-section">
+                    <h4 class="section-title">Tentang</h4>
+                    <div class="settings-item" onclick="alert('Versi aplikasi: v1.0.0')">
+                        <span class="settings-icon">ℹ️</span>
+                        <span class="settings-label">Versi Aplikasi</span>
+                        <span class="settings-value">v1.0.0</span>
+                    </div>
+                    <div class="settings-item" onclick="alert('Syarat dan ketentuan')">
+                        <span class="settings-icon">📄</span>
+                        <span class="settings-label">Syarat &amp; Ketentuan</span>
+                        <span class="settings-arrow">›</span>
+                    </div>
+                    <div class="settings-item" onclick="alert('Kebijakan privasi')">
+                        <span class="settings-icon">🛡️</span>
+                        <span class="settings-label">Kebijakan Privasi</span>
+                        <span class="settings-arrow">›</span>
+                    </div>
+                </div>
+
+                <button class="btn btn--outline btn--full-width" onclick="if(confirm('Apakah Anda yakin ingin keluar?')) navigateTo('loginPage')">
+                    Keluar
+                </button>
+            </div>
+            <div class="bottom-nav">
+                <button class="nav-item" onclick="navigateTo('homePage')">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-label">Beranda</span>
+                </button>
+                <button class="nav-item" onclick="navigateTo('trackingPage')">
+                    <span class="nav-icon">📍</span>
+                    <span class="nav-label">Pelacakan</span>
+                </button>
+                <button class="nav-item" onclick="navigateTo('historyPage')">
+                    <span class="nav-icon">📋</span>
+                    <span class="nav-label">Riwayat</span>
+                </button>
+                <button class="nav-item" onclick="navigateTo('notificationsPage')">
+                    <span class="nav-icon">🔔</span>
+                    <span class="nav-label">Notifikasi</span>
+                </button>
+                <button class="nav-item active" onclick="navigateTo('settingsPage')">
+                    <span class="nav-icon">⚙️</span>
+                    <span class="nav-label">Pengaturan</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Emergency Alert Modal -->
+        <div id="emergencyModal" class="modal">
+            <div class="modal-content emergency-modal">
+                <div class="emergency-header">
+                    <h2 class="emergency-title">🚨 DARURAT!</h2>
+                    <p class="emergency-subtitle">Anak Membutuhkan Bantuan</p>
+                </div>
+                <div class="emergency-info">
+                    <div class="child-profile-emergency">
+                        <div class="child-avatar-large">👧</div>
+                        <h3>Aisyah</h3>
+                    </div>
+                    <div class="emergency-details">
+                        <div class="detail-item">
+                            <span class="detail-icon">📍</span>
+                            <div>
+                                <strong>Lokasi:</strong>
+                                <p>Taman Pakui Sayang</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">📏</span>
+                            <div>
+                                <strong>Jarak dari Anda:</strong>
+                                <p>2.3 km</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">🎤</span>
+                            <div>
+                                <strong>Terdeteksi:</strong>
+                                <p>"Tolong! Lepaskan saya!"</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">🕐</span>
+                            <div>
+                                <strong>Waktu:</strong>
+                                <p>Baru saja</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="audio-player">
+                        <button class="play-audio-btn">▶️ Putar Rekaman Audio</button>
+                    </div>
+                </div>
+                <div class="emergency-actions">
+                    <button class="emergency-btn emergency-btn-primary">
+                        📞 Hubungi Anak
+                    </button>
+                    <button class="emergency-btn emergency-btn-danger">
+                        🚨 Hubungi 112
+                    </button>
+                    <button class="emergency-btn emergency-btn-secondary">
+                        📤 Bagikan Lokasi
+                    </button>
+                    <button class="emergency-btn emergency-btn-secondary">
+                        🆘 Kirim Bantuan
+                    </button>
+                </div>
+                <button class="btn btn--outline btn--full-width" onclick="closeEmergencyModal()">
+                    Tutup (False Alarm)
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
