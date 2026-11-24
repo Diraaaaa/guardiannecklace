@@ -46,42 +46,42 @@ guardian-necklace/
 
 ### Login Page
 <p align="center">
-  <img src="screenshots/Login.png" width="100%" alt="Guardian Necklace Login Page">
+  <img src="screenshoot/Login.png" width="100%" alt="Guardian Necklace Login Page">
 </p>
 
 ### Dashboard
 <p align="center">
-  <img src="screenshots/Dashboard.png" width="100%" alt="Guardian Necklace Dashboard">
+  <img src="screenshoot/Dashboard.png" width="100%" alt="Guardian Necklace Dashboard">
 </p>
 
 ### Real-Time Tracking
 <p align="center">
-  <img src="screenshots/Tracking.png" width="100%" alt="Real-Time Tracking">
+  <img src="screenshoot/Tracking.png" width="100%" alt="Real-Time Tracking">
 </p>
 
 ### Safe Zone (Geofencing)
 <p align="center">
-  <img src="screenshots/Geofencing.png" width="100%" alt="Safe Zone Interface">
+  <img src="screenshoot/Geofencing.png" width="100%" alt="Safe Zone Interface">
 </p>
 
 ### Travel History
 <p align="center">
-  <img src="screenshots/History.png" width="100%" alt="Travel History">
+  <img src="screenshoot/History.png" width="100%" alt="Travel History">
 </p>
 
 ### Notifications
 <p align="center">
-  <img src="screenshots/Notifications.png" width="100%" alt="Notifications Interface">
+  <img src="screenshoot/Notifications.png" width="100%" alt="Notifications Interface">
 </p>
 
 ### Device Status
 <p align="center">
-  <img src="screenshots/Device-Status.png" width="100%" alt="Device Status">
+  <img src="screenshoot/Device-Status.png" width="100%" alt="Device Status">
 </p>
 
 ### Settings
 <p align="center">
-  <img src="screenshots/Settings.png" width="100%" alt="Settings Interface">
+  <img src="screenshoot/Settings.png" width="100%" alt="Settings Interface">
 </p>
 
 ## Project Objectives
