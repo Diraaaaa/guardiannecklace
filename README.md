@@ -19,7 +19,6 @@ Inspired by the concept of smart wearable technology, Guardian Necklace aims to 
 | 🔐 Login Page | Provides a login interface for parents |
 | 🏠 Dashboard | Displays children's profile, safety status, battery level, and device connectivity |
 | 📍 Real-Time Tracking | Displays the child's location, coordinates, and location accuracy |
-| 🛡️ Geofencing | Displays predefined safe zones and their monitoring status |
 | 📋 Travel History | Shows children's daily travel activities through a chronological timeline |
 | 🔔 Notifications | Displays safety alerts, battery notifications, and system status updates |
 | 🚨 Emergency Alert | Provides an emergency alert interface through an interactive modal |
@@ -57,11 +56,6 @@ guardian-necklace/
 ### Real-Time Tracking
 <p align="center">
   <img src="screenshoot/Tracking.png" width="100%" alt="Real-Time Tracking">
-</p>
-
-### Safe Zone (Geofencing)
-<p align="center">
-  <img src="screenshoot/Geofencing.png" width="100%" alt="Safe Zone Interface">
 </p>
 
 ### Travel History
