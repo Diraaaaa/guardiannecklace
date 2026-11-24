@@ -60,7 +60,7 @@ guardian-necklace/
 
 ### Travel History
 <p align="center">
-  <img src="screenshoot/History.png" width="100%" alt="Travel History">
+  <img src="screenshoot/History.png" width="50%" alt="Travel History">
 </p>
 
 ### Notifications
