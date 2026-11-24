@@ -45,17 +45,17 @@ guardian-necklace/
 
 ### Login Page
 <p align="center">
-  <img src="screenshoot/Login.png" width="100%" alt="Guardian Necklace Login Page">
+  <img src="screenshoot/Login.png" width="50%" alt="Guardian Necklace Login Page">
 </p>
 
 ### Dashboard
 <p align="center">
-  <img src="screenshoot/Dashboard.png" width="100%" alt="Guardian Necklace Dashboard">
+  <img src="screenshoot/Dashboard.png" width="50%" alt="Guardian Necklace Dashboard">
 </p>
 
 ### Real-Time Tracking
 <p align="center">
-  <img src="screenshoot/Tracking.png" width="100%" alt="Real-Time Tracking">
+  <img src="screenshoot/Tracking.png" width="50%" alt="Real-Time Tracking">
 </p>
 
 ### Travel History
@@ -65,17 +65,17 @@ guardian-necklace/
 
 ### Notifications
 <p align="center">
-  <img src="screenshoot/Notifications.png" width="100%" alt="Notifications Interface">
+  <img src="screenshoot/Notifications.png" width="50%" alt="Notifications Interface">
 </p>
 
 ### Device Status
 <p align="center">
-  <img src="screenshoot/Device-Status.png" width="100%" alt="Device Status">
+  <img src="screenshoot/Device-Status.png" width="50%" alt="Device Status">
 </p>
 
 ### Settings
 <p align="center">
-  <img src="screenshoot/Settings.png" width="100%" alt="Settings Interface">
+  <img src="screenshoot/Settings.png" width="50%" alt="Settings Interface">
 </p>
 
 ## Project Objectives
